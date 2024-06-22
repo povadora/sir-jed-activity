@@ -65,12 +65,20 @@ body {
   color: #f44336; /* Red icon color */
 }
 
+.film-info-item.person i {
+  margin-right: 10px;
+  color: #947472; /* Red icon color */
+}
+
 .film-info-item.description {
   align-items: flex-start;
+  
 }
 
 .film-info-item.description i {
   margin-top: 20px; 
+  color: #f44336; /* Red icon color */
+
 }
 
 .film-info-item span {

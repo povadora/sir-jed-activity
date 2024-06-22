@@ -35,11 +35,11 @@ export function AboutPage() {
           <h1 className="About-title">{filmDetails?.title}</h1>
           <div className="film-info">
             <div className="film-info-item">
-              <i className="fas fa-user"></i>
+              <i className="fas fa-user person" style={{ color: '#778cec' }}></i>
               <p><span>Director: </span>{filmDetails?.director}</p>
             </div>
             <div className="film-info-item">
-              <i className="fas fa-user-tie"></i>
+              <i className="fas fa-user-tie" style={{ color: '#778cec' }}></i>
               <p><span>Producer: </span>{filmDetails?.producer}</p>
             </div>
             <div className="film-info-item">
@@ -47,11 +47,11 @@ export function AboutPage() {
               <p><span>Release Date: </span>{filmDetails?.release_date}</p>
             </div>
             <div className="film-info-item">
-              <i className="fas fa-star"></i>
+              <i className="fas fa-star"  style={{ color: '#ffd600' }}></i>
               <p><span>Rotten Tomatoes Score: </span>{filmDetails?.rt_score}</p>
             </div>
-            <div className="film-info-item">
-              <i className="fas fa-film-left"></i>
+            <div className="film-info-item description">
+              <i className="fas fa-film description" style={{ color: '#a5aabd' }}></i>
               <p><span>Description: </span>{filmDetails?.description}</p>
             </div>
           </div>
