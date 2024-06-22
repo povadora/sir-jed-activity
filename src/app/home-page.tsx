@@ -4,8 +4,10 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./main-app.scss";
 
+
 export function HomePage() {
   const [films, setFilms] = useState<Film[]>([]);
+  const [searchTerm, setSearchTerm] = useState<string>("");
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -18,10 +20,27 @@ export function HomePage() {
     navigate(filmId);
   };
 
+  const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const filteredFilms = films.filter((film) =>
+    film.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div className="App">
+      <div className="search-bar">
+        <input
+          type="text"
+          placeholder="Search for a film..."
+          value={searchTerm}
+          onChange={handleSearch}
+        />
+        <i className="fas fa-search"></i>
+      </div>
       <div className="film-list">
-        {films.map((film) => (
+        {filteredFilms.map((film) => (
           <div
             key={film.id}
             className="film-item"

@@ -25,10 +25,41 @@ body {
   }
 }
 
+// Search bar styles
+.search-bar {
+  position: relative;
+  margin: 20px 0;
+  margin-left: 20px;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+
+  input {
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    outline: none;
+    background-color: #2a3b4a;
+    color: #ffffff;
+    padding-right: 40px;
+  }
+
+  i {
+    position: absolute;
+    right: 15px;
+    color: #ffffff;
+    pointer-events: none;
+  }
+}
+
+
 // Film item styles
 .film-list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 20px;
   padding: 20px;
 }
@@ -63,3 +94,53 @@ body {
   }
 }
 
+// Responsive styles
+@media (max-width: 1200px) {
+  .film-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .film-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .film-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .search-bar {
+    width: 90%;
+  }
+}
+
+@media (max-width: 576px) {
+  .film-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .app-header {
+    font-size: 36px;
+    small {
+      font-size: 24px;
+    }
+  }
+
+  .search-bar {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .film-item {
+    padding: 5px;
+    img {
+      border-bottom: none;
+    }
+    p {
+      font-size: 0.9rem;
+    }
+  }
+}

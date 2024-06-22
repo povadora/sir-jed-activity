@@ -1,6 +1,7 @@
 import "./main-app.scss";
 import "./about-page.scss";
 import { Outlet } from "react-router-dom";
+import '@fortawesome/fontawesome-free'
 
 export function MainApp() {
   return (

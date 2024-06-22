@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Film } from "./film.interface";
 import "./main-app.scss";
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 export function AboutPage() {
   const { filmId } = useParams();
@@ -49,7 +51,7 @@ export function AboutPage() {
               <p><span>Rotten Tomatoes Score: </span>{filmDetails?.rt_score}</p>
             </div>
             <div className="film-info-item">
-              <i className="fas fa-film"></i>
+              <i className="fas fa-film-left"></i>
               <p><span>Description: </span>{filmDetails?.description}</p>
             </div>
           </div>
