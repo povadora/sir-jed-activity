@@ -1,4 +1,5 @@
 import "./main-app.scss";
+import "./about-page.scss";
 import { Outlet } from "react-router-dom";
 
 export function MainApp() {
@@ -6,7 +7,7 @@ export function MainApp() {
     <div>
       <header className="app-header">
         Welcome to Ghibli Film Shops
-        <small>The Best Film Ever</small>
+        <small className="small-header">Unforgettable Films Await?</small>
       </header>
       
       <Outlet />

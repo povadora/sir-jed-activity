@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Film } from "./film.interface";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import "./main-app.scss";
 
 export function HomePage() {
   const [films, setFilms] = useState<Film[]>([]);
@@ -19,16 +20,18 @@ export function HomePage() {
 
   return (
     <div className="App">
-      {films.map((film) => (
-        <div
-          key={film.id}
-          className="film-item"
-          onClick={() => handleNavigate(film.id)}
-        >
-          <img src={film.image} />
-          <p>{film.title}</p>
-        </div>
-      ))}
+      <div className="film-list">
+        {films.map((film) => (
+          <div
+            key={film.id}
+            className="film-item"
+            onClick={() => handleNavigate(film.id)}
+          >
+            <img src={film.image} alt={film.title} />
+            <p>{film.title}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
